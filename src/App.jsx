@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Todos from "./Components/Todos"
+import NewTodo from "./Components/NewTodo"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <div className="h-screen w-screen bg-[url('../public/images/background.jpeg')] bg-cover bg-center">
+            <div className="h-screen w-screen flex flex-col items-center justify-center space-y-4">
+                <div className="bg-white rounded-2xl shadow-md w-96 p-6">
+                    
+                    <NewTodo />
+
+                    <hr className="mb-4 border-blue-500"/>
+
+                    <ul className="space-y-3">
+                        <Todos />
+                        <Todos />
+                        <Todos />
+                    </ul>
+                </div>
+                <p className="text-gray-700">Simple todo created by <span className="font-bold">Foisal</span></p>
+            </div>
+        </div>
     </>
   )
 }
