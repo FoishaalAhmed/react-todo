@@ -36,7 +36,7 @@ function App() {
             <div className="h-screen w-screen flex flex-col items-center justify-center space-y-4">
                 <div className="bg-white rounded-2xl shadow-md w-96 p-6">
                     
-                    <NewTodo newTodo={setTodos} />
+                    <NewTodo setTodos={setTodos} />
 
                     <hr className="mb-4 border-blue-500"/>
 
